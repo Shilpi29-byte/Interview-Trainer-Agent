@@ -32,9 +32,9 @@ cp .env.example .env
 
 Edit `.env`:
 ```
-IBM_API_KEY=n5usGezF8NyYGMkHb5o41yWuMriGn9vQo3BIuzVRwsTa
+IBM_API_KEY=your_ibm_api_key_here
 IBM_ML_URL=https://us-south.ml.cloud.ibm.com/ml/v1/text/generation?version=2023-05-29
-IBM_PROJECT_ID=b94b9639-06f5-4196-a776-665da871294e
+IBM_PROJECT_ID=your_ibm_project_id_here
 IBM_MODEL_ID=ibm/granite-4-h-small
 PORT=3000
 ```
