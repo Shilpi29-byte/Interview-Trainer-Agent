@@ -25,9 +25,9 @@ npm install
 ```
 
 ### 2. Configure Environment
-Copy `.env.example` to `.env` and fill in your IBM API key:
+Copy `.env.example` to fill in your IBM API key:
 ```bash
-cp .env.example .env
+cp .env.example 
 ```
 
 Edit `.env`:
@@ -57,7 +57,6 @@ interview-trainer/
 ├── backend/
 │   ├── server.js          # Express API server
 │   ├── package.json
-│   ├── .env               # Your secrets (git-ignored)
 │   └── .env.example       # Template
 └── frontend/
     └── index.html         # Full single-page UI
