@@ -1,0 +1,206 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Interview Trainer Agent — Sequence Diagram</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  .page {
+    width: 960px;
+    margin: 0 auto;
+    padding: 28px 32px 36px;
+  }
+  .title-wrap { text-align: center; margin-bottom: 20px; }
+  .title-wrap h1 {
+    font-size: 17px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 1px; color: #000;
+  }
+  .title-wrap p { font-size: 11px; color: #555; margin-top: 3px; }
+  .rule { width: 48px; height: 3px; background: #000; margin: 8px auto 0; }
+  .svg-wrap { overflow: visible; }
+  .footer {
+    margin-top: 18px; padding-top: 10px;
+    border-top: 1px solid #ccc;
+    text-align: center; font-size: 10px; color: #999;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="title-wrap">
+    <h1>Interview Trainer Agent — Sequence Diagram</h1>
+    <p>User  ·  Frontend (index.html)  ·  Backend (server.js)  ·  IBM IAM  ·  IBM Granite (watsonx.ai)</p>
+    <div class="rule"></div>
+  </div>
+
+  <div class="svg-wrap">
+  <svg width="896" height="620" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="sa"><polygon points="0 0,7 3.5,0 7" fill="#000"></polygon></marker>
+      <marker id="ra"><polyline points="0 0,7 3.5,0 7" fill="none" stroke="#555" stroke-width="1.2"></polyline></marker>
+      <marker id="da"><polygon points="0 0,7 3.5,0 7" fill="#555"></polygon></marker>
+    </defs>
+
+    
+
+    
+    <rect x="16" y="8" width="112" height="30" fill="#000"></rect>
+    <text x="72" y="27" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10.5" font-weight="700" fill="#fff">USER</text>
+
+    <rect x="176" y="8" width="112" height="30" fill="#000"></rect>
+    <text x="232" y="27" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10.5" font-weight="700" fill="#fff">index.html</text>
+
+    <rect x="360" y="8" width="112" height="30" fill="#000"></rect>
+    <text x="416" y="27" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10.5" font-weight="700" fill="#fff">server.js</text>
+
+    <rect x="544" y="8" width="112" height="30" fill="#000"></rect>
+    <text x="600" y="27" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10.5" font-weight="700" fill="#fff">IBM IAM</text>
+
+    <rect x="728" y="8" width="112" height="30" fill="#000"></rect>
+    <text x="784" y="20" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10.5" font-weight="700" fill="#fff">IBM Granite</text>
+    <text x="784" y="33" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="8.5" fill="#ccc">watsonx.ai</text>
+
+    
+    <line x1="72" y1="38" x2="72" y2="590" stroke="#bbb" stroke-width="1"></line>
+    <line x1="232" y1="38" x2="232" y2="590" stroke="#bbb" stroke-width="1"></line>
+    <line x1="416" y1="38" x2="416" y2="590" stroke="#bbb" stroke-width="1"></line>
+    <line x1="600" y1="38" x2="600" y2="590" stroke="#bbb" stroke-width="1"></line>
+    <line x1="784" y1="38" x2="784" y2="590" stroke="#bbb" stroke-width="1"></line>
+
+    
+    
+    <rect x="380" y="44" width="340" height="26" rx="0" fill="#f4f4f4" stroke="#aaa" stroke-width="1"></rect>
+    <text x="550" y="60" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#333">getIBMToken() — checks in-memory cache (expires_in − 300 s)</text>
+
+    
+    <line x1="428" y1="84" x2="592" y2="84" stroke="#000" stroke-width="1.3" marker-end="url(#sa)"></line>
+    <text x="510" y="79" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#000">POST apikey  [if token expired]</text>
+    
+    <line x1="592" y1="98" x2="428" y2="98" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="510" y="112" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">Bearer access_token (cached)</text>
+
+    
+    
+    <rect x="0" y="124" width="896" height="15" fill="#000"></rect>
+    <text x="448" y="134.5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" font-weight="800" fill="#fff">1. Generate Question &amp; Evaluate Answer</text>
+
+    <rect x="0" y="212" width="896" height="15" fill="#000"></rect>
+    <text x="448" y="222.5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" font-weight="800" fill="#fff">2. Mock Interview  [loop — each turn]</text>
+
+    <rect x="0" y="302" width="896" height="15" fill="#000"></rect>
+    <text x="448" y="312.5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" font-weight="800" fill="#fff">3. Resume Tips</text>
+
+    <rect x="0" y="390" width="896" height="15" fill="#000"></rect>
+    <text x="448" y="400.5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" font-weight="800" fill="#fff">4. Company Prep</text>
+
+    <rect x="0" y="476" width="896" height="15" fill="#333"></rect>
+    <text x="448" y="486.5" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" font-weight="800" fill="#fff">5. Error Path  [alt — catch block]  &amp;  Catch-all Route</text>
+
+    
+    
+    <line x1="72" y1="150" x2="224" y2="150" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="148" y="145" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">role, topic, difficulty, language</text>
+    
+    <line x1="232" y1="164" x2="408" y2="164" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="320" y="159" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">POST /api/generate-question</text>
+    
+    <line x1="416" y1="178" x2="776" y2="178" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="596" y="173" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">callGranite(prompt)  →  QUESTION · KEY POINTS · SAMPLE ANSWER</text>
+    
+    <line x1="776" y1="192" x2="424" y2="192" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    
+    <line x1="408" y1="204" x2="240" y2="204" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <line x1="224" y1="204" x2="80" y2="204" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="260" y="199" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">{success, data}  →  render card</text>
+
+    
+    
+    <rect x="2" y="228" width="892" height="64" rx="0" fill="none" stroke="#000" stroke-width="1.2"></rect>
+    <text x="10" y="240" font-family="Segoe UI,sans-serif" font-size="8.5" font-weight="700" fill="#000">loop</text>
+
+    <line x1="72" y1="248" x2="224" y2="248" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="148" y="243" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">role, userMessage, history[]</text>
+    <line x1="232" y1="260" x2="408" y2="260" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="320" y="255" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">POST /api/mock-interview</text>
+    <line x1="416" y1="272" x2="776" y2="272" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="596" y="267" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">callGranite(prompt + history)  →  interviewer reply + follow-up</text>
+    <line x1="776" y1="284" x2="240" y2="284" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <line x1="224" y1="284" x2="80" y2="284" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="400" y="279" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">{success, data}  →  append to chat  →  repeat</text>
+
+    
+    <line x1="72" y1="326" x2="224" y2="326" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="148" y="321" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">role, experience</text>
+    <line x1="232" y1="340" x2="408" y2="340" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="320" y="335" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">POST /api/resume-tips</text>
+    <line x1="416" y1="354" x2="776" y2="354" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="596" y="349" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">callGranite(prompt)  →  5 resume tips (India market)</text>
+    <line x1="776" y1="368" x2="240" y2="368" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <line x1="224" y1="368" x2="80" y2="368" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="380" y="363" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">{success, data}  →  render tips panel</text>
+
+    
+    <line x1="72" y1="414" x2="224" y2="414" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="148" y="409" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">company, role</text>
+    <line x1="232" y1="428" x2="408" y2="428" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="320" y="423" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">POST /api/company-prep</text>
+    <line x1="416" y1="442" x2="776" y2="442" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="596" y="437" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">callGranite(prompt)  →  OVERVIEW · ROUNDS · TECH · HR · TIPS</text>
+    <line x1="776" y1="456" x2="240" y2="456" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <line x1="224" y1="456" x2="80" y2="456" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="380" y="451" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">{success, data}  →  render company guide</text>
+
+    
+    
+    <rect x="2" y="496" width="892" height="58" rx="0" fill="none" stroke="#555" stroke-width="1.2"></rect>
+    <text x="10" y="508" font-family="Segoe UI,sans-serif" font-size="8.5" font-weight="700" fill="#555">alt</text>
+
+    
+    <line x1="232" y1="514" x2="408" y2="514" stroke="#555" stroke-width="1.4" marker-end="url(#da)"></line>
+    <text x="320" y="509" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#555">any endpoint  [throws]</text>
+    <line x1="408" y1="528" x2="240" y2="528" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="324" y="523" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">HTTP 500  {success: false, error}</text>
+    <line x1="224" y1="540" x2="80" y2="540" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="152" y="535" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">show error in UI</text>
+
+    
+    <line x1="72" y1="566" x2="408" y2="566" stroke="#000" stroke-width="1.4" marker-end="url(#sa)"></line>
+    <text x="240" y="561" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9.5" fill="#000">GET /*  (browser nav)</text>
+    <line x1="408" y1="580" x2="80" y2="580" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="240" y="575" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="9" fill="#555">res.sendFile( frontend/index.html )</text>
+
+    
+    <rect x="16" y="592" width="112" height="26" fill="#000"></rect>
+    <text x="72" y="608" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">USER</text>
+    <rect x="176" y="592" width="112" height="26" fill="#000"></rect>
+    <text x="232" y="608" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">index.html</text>
+    <rect x="360" y="592" width="112" height="26" fill="#000"></rect>
+    <text x="416" y="608" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">server.js</text>
+    <rect x="544" y="592" width="112" height="26" fill="#000"></rect>
+    <text x="600" y="608" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">IBM IAM</text>
+    <rect x="728" y="592" width="112" height="26" fill="#000"></rect>
+    <text x="784" y="608" text-anchor="middle" font-family="Segoe UI,sans-serif" font-size="10" font-weight="700" fill="#fff">IBM Granite</text>
+
+    
+    <line x1="580" y1="46" x2="608" y2="46" stroke="#000" stroke-width="1.5" marker-end="url(#sa)"></line>
+    <text x="614" y="50" font-family="Segoe UI,sans-serif" font-size="8.5" fill="#333">Request</text>
+    <line x1="580" y1="62" x2="608" y2="62" stroke="#555" stroke-width="1.3" marker-end="url(#ra)"></line>
+    <text x="614" y="66" font-family="Segoe UI,sans-serif" font-size="8.5" fill="#555">Response</text>
+    <line x1="700" y1="46" x2="728" y2="46" stroke="#555" stroke-width="1.3" marker-end="url(#da)"></line>
+    <text x="734" y="50" font-family="Segoe UI,sans-serif" font-size="8.5" fill="#555">Error</text>
+    <rect x="700" y="56" width="22" height="12" fill="none" stroke="#555" stroke-width="1"></rect>
+    <text x="728" y="66" font-family="Segoe UI,sans-serif" font-size="8.5" fill="#555">alt / loop</text>
+  </svg>
+  </div>
+
+  <div class="footer">Made with IBM Bob</div>
+</div>
+</body>
+</html>
