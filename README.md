@@ -25,9 +25,9 @@ npm install
 ```
 
 ### 2. Configure Environment
-Copy `.env.example` to fill in your IBM API key:
+Copy `.env.example` to .env and fill in your IBM API key:
 ```bash
-cp .env.example 
+cp .env.example .env
 ```
 
 Edit `.env`:
